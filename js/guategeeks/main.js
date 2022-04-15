@@ -5,7 +5,7 @@ let init3D = (id) => {
 }
 
 let stop3D = (id) => {
-    document.getElementById(id).style.display = 'none';
+    // document.getElementById(id).style.display = 'none';
 }
 
 Reveal.on( 'slidechanged', event => {
