@@ -1,3 +1,11 @@
+AFRAME.registerComponent('idc-3d-aframe', {
+    init: function () {
+    },
+    tick: function () {
+        let sky = document.querySelector('#idc-3d-aframe a-sky')
+        sky ? sky.remove() : null
+    }
+})
 AFRAME.registerComponent('idc-3d-box', {
 
     init: function () {

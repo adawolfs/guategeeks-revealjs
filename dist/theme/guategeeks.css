@@ -641,16 +641,16 @@ Best rendering observed in FireFox (80.0.1)
   --shadow:#052758;
   --shadow2:#05582d;
   --color00: rgba(0,0,0,0.2);
-  --color01: #2B70D7;
-  --color02: #2159AC;
+  --color01: #6D178F;
+  --color02: #2C2050;
   --color03: #2F2F2F;
   --color04: #2D2C31;
   --color05: #F4F6FB;
   --color06: #FFFFFF;
   --color07: #101010;
   --color08: #CBCBCF;
-  --color09: #FE6155;
-  --color10: #D14C49;
+  --color09: #9411c8;
+  --color10: #6D178F;
   --color11: #CCCDCF;
   --color12: #1B1A1B;
   --color13: #1F1F1F;
@@ -658,7 +658,7 @@ Best rendering observed in FireFox (80.0.1)
   /*#3C3C3C*/
   --color15: #0F0F0F;
   --color16: #3b9a40;
-  --color17: #90C93D;
+  --color17: #27B4D7;
   --color18: #000;
   --color19: #CDC7C2;
   --color20: #BCBCBA;
@@ -682,13 +682,13 @@ Best rendering observed in FireFox (80.0.1)
   --color37: #2868C8;
   --color38: #3C3C3C;
   --color39: #1D1C1C;
-  --color40: #6799E3;
+  --color40: #1D1C1C;
   --color41: rgba(255,255,255,0.2);
   --color42: rgba(0,0,0,0.07);
   --color43: rgba(0,0,0,var(--lcd-backlight, 0.2));
   /*0.2*/
   --color44: #424242;
-  --color45: #1E7B34;
+  --color45: #2868C8;
   --color46: rgba(0,0,0,0.3);
   --color47: #3B3F48;
 }
