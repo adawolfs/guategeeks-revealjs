@@ -162,6 +162,25 @@
 
 				</section>
 
+				<!-- idc = imagina diseña y crea -->
+				<section data-auto-animate class="guategeeks-page-layout">
+					<div class="slide-text">
+						<p data-id="course-title" class="title">Imagina, Diseña y crea en 3D</p>
+
+						<p class="text">
+							Nuestro enfoque STEAM y Metodología Design Thinking nos permite desarrollar en los
+							estudiantes un pensamiento crítico mientras se da solución a problemáticas reales en un
+							ambiente colaborativo.
+						</p>
+					</div>
+
+					<div class="slide-image">
+						<iframe id="threejs-editor" src="threejs/editor/" frameborder="0"></iframe>
+					</div>
+
+
+				</section>
+
 				<section data-auto-animate class="guategeeks-page-layout">
 					<div class="slide-text">
 						<p data-id="course-title" class="title">ShortCircuit</p>
@@ -175,6 +194,41 @@
 					<div class="slide-image">
 						<div data-id="course-img" id='short-circuit' class="slide-image">
 						</div>
+				</section>
+
+				<section data-auto-animate class="guategeeks-page-layout">
+					<div class="slide-text">
+						<p data-id="course-title" class="title">ShortCircuit</p>
+
+						<p class="text">
+							Nuestra metodología se enfoca en crear experiencias educativas inmersivas y personalizadas
+							que cierran la brecha entre lo físico y lo virtual mientras motivan al estudiante a innovar,
+							experimentar y compartir su aprendizaje.
+						</p>
+					</div>
+					<div class="slide-image">
+						<!-- Imagina, Diseña y crea en 3D -->
+						<!-- A-FRAME -->
+						<a-scene class="slide-aframe-short-circuit"
+							physics="driver: ammo; debug: true; gravity: -9.8; debugDrawMode: 1"
+							background="transparent: true" embedded debug>
+
+							<a-assets>
+								<a-asset-item id="uno_gt-obj" src="assets/obj/uno_gt/tinker.obj"></a-asset-item>
+								<a-asset-item id="uno_gt-mtl" src="assets/obj/uno_gt/obj.mtl"></a-asset-item>
+							</a-assets>
+
+							  <!-- Using the asset management system. -->
+							<a-obj-model src="#uno_gt-obj" mtl="#uno_gt-mtl" position="0 2 -5" scale="0.05 0.05 0.05" ></a-obj-model>		
+							
+							<a-entity light="type: point; intensity:1; color:red; distance: 1; decay: 000+" position="0 2 -4" ></a-entity>
+							<!-- <a-light type="point" color="#FFFFFF"></a-light> -->
+							
+							<a-camera position="0 3 2" rotation="-13 1 0"></a-camera>
+
+						</a-scene>
+						<!-- A-FRAME -->
+					</div>
 				</section>
 
 
