@@ -60,9 +60,12 @@ $selectionColor: #fff;
 @import "../template/theme";
 // ---------------------------------------------
 
+// Rive -----------------------------------------
+@import "../guategeeks/rive.scss";
+// ---------------------------------------------
+
+
 // menu
-
-
 nav {
     width: 100%;
     position: absolute;
@@ -90,50 +93,95 @@ nav {
 
 // Slides Themes
 
-.reveal div.slide-text {
-    position: absolute;
-    left: 2.97%;
-    right: 52.97%;
-    top: 100px;
-
+.reveal h1,
+.reveal h2,
+.reveal p {
     font-family: 'Barlow';
     font-style: normal;
-    font-weight: 400;
-    font-size: 81px;
-    line-height: 70px;
-    /* or 86% */
-    color: #FFFFFF;
+    font-weight: 400 !important;
+    text-transform: none;
+}
 
-    .title {
-        max-width: 560px;
-        text-align: left;
-        font-size: 120px;
-        line-height: 100px;
-        margin-bottom: 50px;
-    }
+.reveal h1,
+.reveal h2 {
+    text-shadow: -12px 12px #0000002f;
+    font-size: 120px;
+    line-height: 100px;
+    margin-bottom: 50px;
+}
 
-    .text {
-        max-width: 560px;
-        text-align: left;
-        font-size: 25px;
-        line-height: 28px;
+.reveal {
+    .slides {
+        section.guategeeks-page-layout {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            div.slide-text {
+    
+                padding-left: 50px;
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+            
+                font-family: 'Barlow';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 81px;
+                line-height: 70px;
+                /* or 86% */
+                color: #FFFFFF;
+            
+                .title {
+                    text-shadow: -12px 12px #0000002f;
+                    max-width: 560px;
+                    text-align: left;
+                    font-size: 120px;
+                    line-height: 100px;
+                    margin-bottom: 50px;
+                }
+            
+                .text {
+                    text-shadow: -12px 12px #0000002f;
+                    max-width: 560px;
+                    text-align: left;
+                    font-size: 25px;
+                    line-height: 28px;
+                }
+            }
+            
+            div.slide-image {
+                // position:absolute;
+                // z-index: 9999;
+                // margin: 0;
+                // left: 58.83%;
+                // right: -2.03%;
+                // top: 19.86%;
+                // bottom: 11.53%;
+                width: 50%;
+                height: 100%;
+                max-height: max-content ;
+                #idc-3d-aframe,
+                img {
+                    float: right;
+                    width: 800px;
+                    height: 800px;
+                }
+                #short-circuit {
+                    position:absolute;
+                    z-index: 9999;
+                    margin: 0;
+                    right: -2.03%;
+                    top: 19.86%;
+                    bottom: 11.53%;
+                }
+            }
+
+        }
     }
 }
 
-#idc-3d-aframe,
-#short-circuit,
-.reveal img.slide-image {
-    position:absolute;
-    z-index: 9999;
-    margin: 0;
-    width: 800px;
-    height: 800px;
-    left: 58.83%;
-    right: -2.03%;
-    top: 19.86%;
-    bottom: 11.53%;
-    max-height: max-content ;
-}
+
+
 
 
 // .reveal {

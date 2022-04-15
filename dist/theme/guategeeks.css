@@ -368,6 +368,12 @@ section.has-light-background, section.has-light-background h1, section.has-light
     background-color: var(--r-background-color);
   }
 }
+#background-canvas {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+}
+
 nav {
   width: 100%;
   position: absolute;
@@ -390,11 +396,33 @@ nav div a:link {
   text-decoration: none;
 }
 
-.reveal div.slide-text {
-  position: absolute;
-  left: 2.97%;
-  right: 52.97%;
-  top: 100px;
+.reveal h1,
+.reveal h2,
+.reveal p {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400 !important;
+  text-transform: none;
+}
+
+.reveal h1,
+.reveal h2 {
+  text-shadow: -12px 12px #0000002f;
+  font-size: 120px;
+  line-height: 100px;
+  margin-bottom: 50px;
+}
+
+.reveal .slides section.guategeeks-page-layout {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.reveal .slides section.guategeeks-page-layout div.slide-text {
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
   font-family: "Barlow";
   font-style: normal;
   font-weight: 400;
@@ -403,33 +431,39 @@ nav div a:link {
   /* or 86% */
   color: #FFFFFF;
 }
-.reveal div.slide-text .title {
+.reveal .slides section.guategeeks-page-layout div.slide-text .title {
+  text-shadow: -12px 12px #0000002f;
   max-width: 560px;
   text-align: left;
   font-size: 120px;
   line-height: 100px;
   margin-bottom: 50px;
 }
-.reveal div.slide-text .text {
+.reveal .slides section.guategeeks-page-layout div.slide-text .text {
+  text-shadow: -12px 12px #0000002f;
   max-width: 560px;
   text-align: left;
   font-size: 25px;
   line-height: 28px;
 }
-
-#idc-3d-aframe,
-#short-circuit,
-.reveal img.slide-image {
+.reveal .slides section.guategeeks-page-layout div.slide-image {
+  width: 50%;
+  height: 100%;
+  max-height: max-content;
+}
+.reveal .slides section.guategeeks-page-layout div.slide-image #idc-3d-aframe,
+.reveal .slides section.guategeeks-page-layout div.slide-image img {
+  float: right;
+  width: 800px;
+  height: 800px;
+}
+.reveal .slides section.guategeeks-page-layout div.slide-image #short-circuit {
   position: absolute;
   z-index: 9999;
   margin: 0;
-  width: 800px;
-  height: 800px;
-  left: 58.83%;
   right: -2.03%;
   top: 19.86%;
   bottom: 11.53%;
-  max-height: max-content;
 }
 
 .reveal p {
