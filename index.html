@@ -19,6 +19,12 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+
+		<!-- Aframe  -->
+		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+		<script
+        src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
 	</head>
 	<body>
 		
@@ -98,7 +104,9 @@
 								Nuestro enfoque STEAM y Metodología Design Thinking nos permite desarrollar en los estudiantes un pensamiento crítico mientras se da solución a problemáticas reales en un ambiente colaborativo.
 							</p>
 						</div>
-						<img data-id="course-img" class="slide-image" src="images/about_us.png" alt="home">
+						<a-scene id="aframe-3d"  background="color: #060F18" embedded debug environment="preset: forest">
+						</a-scene>
+
 					</section>
 
 					<section data-auto-animate>
