@@ -428,10 +428,6 @@ nav div a:link {
   max-height: max-content;
 }
 
-.reveal {
-  mix-blend-mode: lighten;
-}
-
 .reveal p {
   font-weight: 300;
   text-shadow: 1px 1px #222;
