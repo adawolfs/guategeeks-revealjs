@@ -25,6 +25,7 @@
 		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 		<script
         src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+		<script src="js/guategeeks/aframe/main.js"></script>
 	</head>
 	<body>
 		
@@ -95,8 +96,8 @@
 						</div>
 						<img data-id="course-img" class="slide-image" src="images/home.png" alt="home">
 					</section>
-
-					<section data-auto-animate data-transition="slide" >
+					<!-- idc = imagina diseña y crea -->
+					<section id='idc-3d-slide' data-auto-animate data-transition="slide" >
 						<div class="slide-text">
 							<p data-id="course-title" class="title">Imagina, Diseña y crea en 3D</p>
 	
@@ -104,8 +105,20 @@
 								Nuestro enfoque STEAM y Metodología Design Thinking nos permite desarrollar en los estudiantes un pensamiento crítico mientras se da solución a problemáticas reales en un ambiente colaborativo.
 							</p>
 						</div>
-						<a-scene id="aframe-3d"  background="color: #060F18" embedded debug environment="preset: forest">
+
+						<!-- Imagina, Diseña y crea en 3D -->
+						<!-- A-FRAME -->
+						<a-scene id="idc-3d-aframe" idc-3d-aframe background="color: #060F18" embedded debug environment="horizonColor: #ddd; ground: flat">
+							
+							<a-box id='box-1' idc-3d-box position="-2 1 -3"  color="#6D168F"></a-box>
+							<a-box id='box-2' idc-3d-box position="0 4 -3"  color="#6D168F"></a-box>
+							<a-box id='box-3' idc-3d-box position="2 1 -3"  color="#6D168F"></a-box>
+
+							<a-light type="ambient" color="#445451"></a-light>
+							<a-camera position="0 3 2" rotation="-13 1 0"></a-camera>
+
 						</a-scene>
+						<!-- A-FRAME -->
 
 					</section>
 
@@ -117,7 +130,7 @@
 								Nuestra metodología se enfoca en crear experiencias educativas inmersivas y personalizadas que cierran la brecha entre lo físico y lo virtual mientras motivan al estudiante a innovar, experimentar y compartir su aprendizaje.
 							</p>
 						</div>
-						<img data-id="course-img" class="slide-image" src="images/home.png" alt="home">
+						<div data-id="course-img" id='short-circuit' class="slide-image">
 					</section>
 
 					
@@ -177,5 +190,6 @@
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
+		<script src="js/guategeeks/main.js" type="module"></script>
 	</body>
 </html>
