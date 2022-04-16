@@ -123,42 +123,33 @@
 				</section>
 				<!-- idc = imagina diseña y crea -->
 				<section id='idc-3d-slide' data-auto-animate class="guategeeks-page-layout">
-					<div class="slide-text">
-						<p data-id="course-title" class="title">Imagina, Diseña y crea en 3D</p>
-
-						<p class="text">
-							Nuestro enfoque STEAM y Metodología Design Thinking nos permite desarrollar en los
-							estudiantes un pensamiento crítico mientras se da solución a problemáticas reales en un
-							ambiente colaborativo.
-						</p>
-					</div>
-
-					<div class="slide-image">
+		
 
 						<!-- Imagina, Diseña y crea en 3D -->
 						<!-- A-FRAME -->
-						<a-scene id="idc-3d-aframe" idc-3d-aframe
-							physics="driver: ammo; debug: true; gravity: -9.8; debugDrawMode: 1"
-							background="transparent: true" embedded debug
-							environment="ground: flat; skyType: color; skyColor: #ffffffff; grid: 1x1">
+						<a-scene class="idc-3d-aframe" idc-3d-scene
+							background="transparent: true" 
+							environment="ground: flat; skyType: color; skyColor: #ffffffff; grid: 1x1" >
+							
+							<a-entity scale="20 20 20" position="0 5 -3"
+							text="value: Imagina, Diseña y Crea en 3D; font: mozillavr; align: center;" ></a-entity>
 
-							<a-box id='box-1' idc-3d-boxx position="-2 1 -3" color="#112537" ammo-body
+							<a-entity scale="10 10 10" position="0 2 -3"
+							text="value: Nuestro enfoque STEAM y Metodología Design Thinking nos permite desarrollar en los estudiantes un pensamiento crítico mientras se da solución a problemáticas reales en un ambiente colaborativo.; font: mozillavr; align: center;" ></a-entity>
+
+							<a-box id='box-1' idc-3d-boxx position="-6 1 -3" color="#112537" ammo-body
 								ammo-shape="type: box;"></a-box>
-							<a-box id='box-2' idc-3d-boxx position="0 4 -3" color="#112537" ammo-body
-								ammo-shape="type: box;"></a-box>
-							<a-box id='box-3' idc-3d-boxx position="2 1 -3" color="#112537" ammo-body
+							<a-box id='box-3' idc-3d-boxx position="6 1 -3" color="#112537" ammo-body
 								ammo-shape="type: box;"></a-box>
 
 							<a-plane position="0 0 -4" rotation="90 0 0" width="50" height="50" color="#7BC8A4" shadow
 								ammo-body="type: static; mass: 0;" ammo-shape="type: box;"></a-plane>
 
 							<a-light type="ambient" color="#445451"></a-light>
-							<a-camera position="0 3 2" rotation="-13 1 0"></a-camera>
+							<a-camera position="0 3 2" rotation="-13 1 -2"></a-camera>
 
 						</a-scene>
 						<!-- A-FRAME -->
-					</div>
-
 
 				</section>
 
@@ -211,7 +202,9 @@
 						<!-- A-FRAME -->
 						<a-scene class="slide-aframe-short-circuit"
 							physics="driver: ammo; debug: true; gravity: -9.8; debugDrawMode: 1"
-							background="transparent: true" embedded debug>
+							background="transparent: true"
+							short-circuit-scene embedded debug>
+							
 
 							<a-assets>
 								<a-asset-item id="uno_gt-obj" src="assets/obj/uno_gt/tinker.obj"></a-asset-item>
@@ -221,8 +214,8 @@
 							  <!-- Using the asset management system. -->
 							<a-obj-model src="#uno_gt-obj" mtl="#uno_gt-mtl" position="0 2 -5" scale="0.05 0.05 0.05" ></a-obj-model>		
 							
-							<a-entity light="type: point; intensity:1; color:red; distance: 1; decay: 000+" position="0 2 -4" ></a-entity>
-							<!-- <a-light type="point" color="#FFFFFF"></a-light> -->
+							<a-entity id="short-circuit-led" light="type: point; intensity:1; color:red; distance: 0.2; decay: 0.00000000000000000000000000000000001" position="-1 3.7 -4" ></a-entity>
+							<a-light type="ambient" color="#FFFFFF" intensity="0.7"></a-light>
 							
 							<a-camera position="0 3 2" rotation="-13 1 0"></a-camera>
 
