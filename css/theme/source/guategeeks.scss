@@ -27,11 +27,11 @@ $codeBackground: #23241f;
 $backgroundColor: $coal;
 
 // Main text
-$mainFont: Ubuntu, 'sans-serif';
+$mainFont: Barlow, 'sans-serif';
 $mainColor: #eee;
 
 // Headings
-$headingFont: Ubuntu, 'sans-serif';
+$headingFont: Barlow, 'sans-serif';
 $headingTextShadow: 2px 2px 2px $coal;
 
 // h1 shadow, borrowed humbly from 
@@ -39,7 +39,7 @@ $headingTextShadow: 2px 2px 2px $coal;
 $heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
 
 // Links
-$linkColor: $blood;
+$linkColor: #fff;
 $linkColorHover: lighten( $linkColor, 20% );
 
 // Text selection
@@ -108,7 +108,6 @@ nav {
 .reveal h1,
 .reveal h2,
 .reveal p {
-    font-family: 'Barlow';
     font-style: normal;
     font-weight: 400 !important;
     text-transform: none;
@@ -129,13 +128,10 @@ nav {
             align-items: center;
             justify-content: center;
             div.slide-text {
-    
                 padding-left: 50px;
                 display: flex;
                 flex-direction: column;
                 width: 50%;
-            
-                font-family: 'Barlow';
                 font-style: normal;
                 font-weight: 400;
                 font-size: 81px;

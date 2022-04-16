@@ -20,12 +20,12 @@ section.has-light-background, section.has-light-background h1, section.has-light
  *********************************************/
 :root {
   --r-background-color: #222;
-  --r-main-font: Ubuntu, sans-serif;
+  --r-main-font: Barlow, sans-serif;
   --r-main-font-size: 40px;
   --r-main-color: #eee;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: Ubuntu, sans-serif;
+  --r-heading-font: Barlow, sans-serif;
   --r-heading-color: #eee;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
@@ -38,9 +38,9 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-heading3-size: 1.55em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #a23;
-  --r-link-color-dark: #6a1520;
-  --r-link-color-hover: #dd5566;
+  --r-link-color: #fff;
+  --r-link-color-dark: #d9d9d9;
+  --r-link-color-hover: white;
   --r-selection-background-color: #a23;
   --r-selection-color: #fff;
 }
@@ -736,7 +736,6 @@ nav div a:link {
 .reveal h1,
 .reveal h2,
 .reveal p {
-  font-family: "Barlow";
   font-style: normal;
   font-weight: 400 !important;
   text-transform: none;
@@ -760,7 +759,6 @@ nav div a:link {
   display: flex;
   flex-direction: column;
   width: 50%;
-  font-family: "Barlow";
   font-style: normal;
   font-weight: 400;
   font-size: 81px;
