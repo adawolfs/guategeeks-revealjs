@@ -1,8 +1,27 @@
-AFRAME.registerComponent('idc-3d-aframe', {
+AFRAME.registerComponent('short-circuit-scene', {
+    init: function () {
+        this.led = true;
+        let el = this.el;
+        el.addEventListener('click', function (evt) {
+            this.led = !this.led;
+            console.log(this.led);
+            document.getElementById('short-circuit-led').setAttribute('visible', this.led);
+            let camera = el.querySelector('a-camera');
+            
+            el.querySelector('a-camera').setAttribute('position', '0 3 -1')
+        });
+
+    },
+    tick: function () {
+
+    }
+})
+AFRAME.registerComponent('idc-3d-scene', {
     init: function () {
     },
     tick: function () {
-        let sky = document.querySelector('#idc-3d-aframe a-sky')
+        let el = this.el;
+        let sky = el.querySelector('a-sky')
         sky ? sky.remove() : null
     }
 })

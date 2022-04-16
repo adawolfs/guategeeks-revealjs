@@ -368,10 +368,12 @@ section.has-light-background, section.has-light-background h1, section.has-light
     background-color: var(--r-background-color);
   }
 }
-#background-canvas {
+.background-canvas {
   position: absolute;
-  right: 5%;
+  right: 0;
   bottom: 10%;
+  opacity: 0.1;
+  transform: scale(1.5);
 }
 
 /*
