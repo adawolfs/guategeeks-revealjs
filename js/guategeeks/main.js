@@ -10,6 +10,5 @@ let stop3D = (id) => {
 
 Reveal.on( 'slidechanged', event => {
     console.log();
-    event.currentSlide.id === 'idc-3d-slide' ? init3D('idc-3d-aframe') : stop3D('idc-3d-aframe');
     // event.previousSlide, event.currentSlide, event.indexh, event.indexv
 } );

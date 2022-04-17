@@ -195,7 +195,7 @@ const Plugin = () => {
 
 				// If the there's a 'notes' query set, open directly
 				if( window.location.search.match( /(\?|\&)notes/gi ) !== null ) {
-					openSpeakerWindow();
+					//openSpeakerWindow();
 				}
 				else {
 					// Keep listening for speaker view hearbeats. If we receive a
@@ -221,14 +221,16 @@ const Plugin = () => {
 
 				// Open the notes when the 's' key is hit
 				deck.addKeyBinding({keyCode: 83, key: 'S', description: 'Speaker notes view'}, function() {
-					openSpeakerWindow();
+					//openSpeakerWindow();
+
 				} );
 
 			}
 
 		},
 
-		open: openSpeakerWindow
+		open: ()=>{
+		}
 	};
 
 };
