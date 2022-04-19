@@ -376,6 +376,12 @@ section.has-light-background, section.has-light-background h1, section.has-light
   transform: scale(1.5);
 }
 
+.rive-laptop-pc-phone {
+  position: relative;
+  top: 100px;
+  transform: scale(1.5);
+}
+
 /*
 
 "No DIV" Arduino UNO with LCD Display and Animation
