@@ -1,0 +1,4 @@
+[submodule "threejs"]
+	path = threejs
+	url = git@github.com:adawolfs/three.js.git
+	branch = guategeeks

@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/blood.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+
+
+	<div class="reveal">
+		<div class="slides">
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<h1>Javascript</h1>
+
+			</section>
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<div class="slide-text">
+					<h2>Variables y Tipos</h2>
+					<pre data-id="code">
+						<code data-line-numbers="1-2|4-5|7-8|10-11|13-14|16-17|19-20" class="hljs" data-trim>
+							// Cual es tu nombre?
+							let name = "Carlos";
+
+							// En que año naciste?
+							let bornIn = 1995;
+
+							// Como te encuentras el dia de hoy?
+							let isHappy = true;
+
+							// Tienes auto?
+							let hasCar = null;
+
+							// Es de noche?
+							let isNight = undefined;
+
+							// Que animales hay en la granja?
+							let farme = ['🐄', '🐑', '🐇', '🐤', '🐄', '🦆', '🐕'];
+
+							// Que año es?
+							const actualYear = new Date().getFullYear();
+
+
+
+
+
+
+
+
+
+							//
+						</code>
+					</pre>
+				</div>
+
+			</section>
+
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<div class="slide-text">
+					<h2>Funciones</h2>
+					<pre data-id="code">
+						<code data-line-numbers="|1,3-5" class="hljs" data-trim>
+								let myAge = getCurrentAge();
+								
+								function getCurrentAge() {
+									return actualYear - bornIn;
+								}
+						</code>
+					</pre>
+				</div>
+
+			</section>
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<div class="slide-text">
+					<h2>Funciones con argumentos</h2>
+					<pre data-id="code">
+						<code data-line-numbers class="hljs" data-trim>
+							<script type="text/template">
+
+								showCurrentAge(myAge);
+
+								function showCurrentAge(age) {
+									console.log("Tu edad actual es: " + age);
+								}
+						</script>
+						</code>
+					</pre>
+				</div>
+
+			</section>
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<div class="slide-text">
+					<h2>Funciones flecha</h2>
+					<pre data-id="code">
+						<code data-line-numbers class="hljs typescript" data-trim>
+								
+								const getYearWithOutParameters = () => { return actualYear - bornIn };
+
+								const getYearWithParameters = (year, born) => { 
+									return year - born 
+								};
+								
+								showCurrentAge(getYearWithOutParameters());
+								showCurrentAge(getYearWithParameters(actualYear, bornIn));
+						</code>
+					</pre>
+				</div>
+
+			</section>
+
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<div class="slide-text">
+					<h2>Condicionales</h2>
+					<pre data-id="code">
+						<code data-line-numbers="|1|3|4|5|6" class="hljs" data-trim>
+							<script type="text/template">
+								let myFavoriteAnimal = '🦀';
+
+								if (myFavoriteAnimal === '🐄') {
+									console.log("Mi animal favorito es la vaca 🐄");
+								} else {
+									console.log("Mi animal favorito NO es la vaca 🐄");
+								}
+							</script>
+						</code>
+					</pre>
+				</div>
+
+			</section>
+
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<div class="slide-text">
+					<h2>Condicionales anidados</h2>
+					<pre data-id="code">
+						<code data-line-numbers="|1-3|5" class="hljs" data-trim>
+							<script type="text/template">
+								let haveFarm = false;
+								let likeAnimals = "SI";
+								let myCurrentAge = getCurrentAge(1994);
+								
+								if (haveFarm == true && likeAnimals == "SI" && myCurrentAge >= 18) {
+									console.log("Estoy listo para tener ser granjero 👨‍🌾");
+								} else {
+									console.log("Aun no tengo lo necesario para ser un granjero 😥, pero lo tendre 🙋");
+								}
+							</script>
+						</code>
+					</pre>
+				</div>
+
+			</section>
+
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<div class="slide-text">
+					<h2>Condiciones multiples</h2>
+					<pre data-id="code">
+						<code data-line-numbers="|1|3|5|7|9" class="hljs" data-trim>
+							<script type="text/template">
+								let mood = '😃';
+
+								if (mood == '😃') {
+									console.log("Hoy me encuentro feliz 😃");
+								} else if (mood == '😢') {
+									console.log("Parece que esta lloviendo 😢");
+								} else if (mood == '😐') {
+									console.log("Todo me parece meh 😐");
+								} else {
+									console.log("No puedo describir mi estado de ánimo 💔");
+								}
+							</script>
+						</code>
+					</pre>
+				</div>
+
+			</section>
+
+			<section data-auto-animate data-auto-animate-unmatched="fade">
+				<div class="slide-text">
+					<h2>Condiciones multiples switch</h2>
+					<pre data-id="code">
+						<code data-line-numbers='|1|3|4,6|7,9|10,12|13,15' class="hljs" data-trim>
+							<script type="text/template">
+								mood = '😐';
+
+								switch (mood) {
+									case '😃':
+										console.log("Hoy me encuentro feliz 😃");
+										break;
+									case '😢':
+										console.log("Parece que esta lloviendo 😢");
+										break;
+									case '😐':
+										console.log("Todo me parece meh 😐");
+										break;
+									default:
+										console.log("No puedo describir mi estado de ánimo 💔");
+										break;
+								}
+
+
+
+
+
+
+
+
+
+								//
+							</script>
+						</code>
+					</pre>
+				</div>
+
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+            width: 960,
+	        height: 700,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>

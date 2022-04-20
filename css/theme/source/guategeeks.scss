@@ -1,0 +1,325 @@
+/**
+ * Blood theme for reveal.js
+ * Author: Walther http://github.com/Walther
+ *
+ * Designed to be used with highlight.js theme
+ * "monokai_sublime.css" available from
+ * https://github.com/isagalaev/highlight.js/
+ *
+ * For other themes, change $codeBackground accordingly.
+ *
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,700,300italic,700italic);
+
+// Colors used in the theme
+$dark: #112537;
+$light: #6D168F;
+$blood: #a23;
+$coal: #222;
+$codeBackground: #23241f;
+
+$backgroundColor: $coal;
+
+// Main text
+$mainFont: 'Barlow, sans-serif';
+$mainColor: #eee;
+
+$headingFontWeight: 100;
+
+// Headings
+$headingFont: Barlow,
+'sans-serif';
+$headingTextShadow: none;
+
+// h1 shadow, borrowed humbly from 
+// (c) Default theme by Hakim El Hattab
+$heading1TextShadow: none;
+
+// Links
+$linkColor: #fff;
+$linkColorHover: lighten($linkColor, 20%);
+
+// Text selection
+$selectionBackgroundColor: $dark;
+$selectionColor: #fff;
+
+// Background generator
+@mixin bodyBackground() {
+    @include horizontal-gradient($dark, $light) //@include radial-gradient( #112537, #6D168F );
+}
+
+// Change text colors against dark slide backgrounds
+@include light-bg-text-color(#222);
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// Rive -----------------------------------------
+@import "../guategeeks/rive.scss";
+// ---------------------------------------------
+
+// Arduino UNO ----------------------------------
+@import "../guategeeks/arduino.scss";
+// ---------------------------------------------
+
+// AFrame ----------------------------------
+@import "../guategeeks/aframe.scss";
+// ---------------------------------------------
+
+
+// Threejs ----------------------------------
+@import "../guategeeks/threejs.scss";
+// ---------------------------------------------
+
+// menu
+nav {
+    width: 100%;
+    position: absolute;
+    z-index: 9999;
+    font-weight: 100;
+    font-size: large;
+    
+    .nav-wrapper {
+        width: 100%;
+        display: flex;
+        padding: 20px 40px 0 0;
+        .logo {
+            display: flex;
+            justify-content: center;
+            width: 10%;
+            padding-left: 50px;
+            img {
+                width: 200px;
+                height: 100%;
+            }
+        }
+        
+        .menu-wrapper {
+            width: 85%;
+            
+            .menu {
+                
+                display: flex;
+                float: right;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    
+        
+    
+        div {
+            padding: 10px;
+            font-family: 'Barlow', sans-serif;
+            color: white;
+            text-transform: uppercase;
+    
+            a:visited,
+            a:link {
+    
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+   
+}
+
+// footer
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    color: #eee;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 100;
+    font-size: 1em;
+    text-align: center;
+}
+
+// Slides Themes
+
+.reveal {
+    font-style: normal;
+    text-transform: none;
+    text-shadow: none;
+    
+    p {
+        font-weight: 100 !important;
+    }
+
+    h1,
+    h2 {
+
+       font-size: 120px;
+       font-weight: 400 !important;
+       line-height: 100px;
+       margin-bottom: 50px;
+    }
+}
+
+
+
+.reveal {
+    .slides {
+        width: 100%;
+        height: 100%;
+        section.page-layout-reverse{
+            flex-direction: row-reverse;
+        }
+        section.guategeeks-page-layout {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+
+            div {
+                .left {
+                    top: 0;
+                    left: 0;
+                }
+                .right {
+                    top: 0;
+                    right: 0;
+                }
+            }
+
+            div.slide-text {
+                padding-left: 50px;
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 81px;
+                line-height: 70px;
+                /* or 86% */
+                color: #FFFFFF;
+
+                .title {
+                    text-shadow: none;
+                    max-width: 560px;
+                    text-align: left;
+                    font-size: 160px;
+                    line-height: 100px;
+                    margin-bottom: 50px;
+                    font-weight: 400 !important;
+                    line-height: 90%;
+                }
+
+                .text {
+                    text-shadow: none;
+                    text-align: left;
+                    font-size: 35px;
+                    line-height: 28px;
+                    line-height: 150%;
+                }
+            }
+
+            div.slide-image {
+                width: 50%;
+                img {
+                    float: none;
+                }
+
+                #short-circuit {
+                    position: absolute;
+                    z-index: 9999;
+                    margin: 0;
+                    right: -2.03%;
+                    top: 19.86%;
+                    bottom: 11.53%;
+                }
+            }
+
+        }
+    }
+}
+
+// ---------------------------------------------
+// ---------------------------------------------
+
+.guategeeks-about-us {
+    .slide-image {
+        canvas,
+        img {
+            max-height: none;
+            position: absolute;
+            top: 20%;
+            right: 0px;
+            width: 700px;
+        }
+    }
+}
+
+.slide-image.teachers {
+    height: 930px;
+    img{
+        max-height: none;
+        position: absolute;
+        top: 100px;
+        left: -100px;
+        width: 1160px;
+        height: 930px;
+    }
+}
+
+// ---------------------------------------------
+// ---------------------------------------------
+
+
+
+
+
+
+// .reveal {
+//     mix-blend-mode: lighten; // IMPORTANTE!!!
+// }
+
+// some overrides after theme template import
+
+.reveal p {
+    font-weight: 300;
+    text-shadow: 1px 1px $coal;
+}
+
+section.has-light-background {
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4 {
+        text-shadow: none;
+    }
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-weight: 700;
+}
+
+.reveal p code {
+    background-color: $codeBackground;
+    display: inline-block;
+    border-radius: 7px;
+}
+
+.reveal small code {
+    vertical-align: baseline;
+}
