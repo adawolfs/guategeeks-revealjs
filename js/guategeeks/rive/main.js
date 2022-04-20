@@ -28,3 +28,12 @@ new rive.Rive({
     artboard: "artboard",
     autoplay: true
 });
+
+let rive_blog = document.getElementsByClassName("rive-blog")[0];
+new rive.Rive({
+    src: "assets/rive/blog.riv",
+    canvas: rive_blog,
+    animations: ["image", "chat", "hearth", "face", "pencil"],
+    artboard: "artboard",
+    autoplay: true
+});
