@@ -1,5 +1,7 @@
 
-
+let guategeeks = () => {
+    document.getElementById('splash').style.display = 'none';
+}
 let init3D = (id) => {
     document.getElementById(id).style.display = 'block';
 }

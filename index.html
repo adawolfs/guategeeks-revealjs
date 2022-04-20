@@ -32,10 +32,12 @@
 		src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
 	<script src="js/guategeeks/aframe/main.js"></script>
 
-
+	<script src="js/guategeeks/main.js"></script>
 </head>
 
-<body width="100%" height="100%">
+<body width="100%" height="100%" onload="guategeeks()">
+	<div id="splash">
+	</div>
 
 	<canvas class="background-canvas" width="960px" height="540px"></canvas>
 
@@ -358,7 +360,6 @@
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
 		});
 	</script>
-	<script src="js/guategeeks/main.js" type="module"></script>
 	<!-- Rive -->
 	<script src="https://unpkg.com/@rive-app/webgl"></script>
 	<script src="js/guategeeks/rive/main.js"></script>
