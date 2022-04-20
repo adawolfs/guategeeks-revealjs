@@ -19,3 +19,12 @@ new rive.Rive({
     artboard: "composition",
     autoplay: true
 });
+
+let rive_ai = document.getElementsByClassName("rive-ai")[0];
+new rive.Rive({
+    src: "assets/rive/ai.riv",
+    canvas: rive_ai,
+    animations: ["brain", "data1"],
+    artboard: "artboard",
+    autoplay: true
+});

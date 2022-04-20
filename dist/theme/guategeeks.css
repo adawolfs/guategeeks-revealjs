@@ -378,7 +378,6 @@ section.has-light-background, section.has-light-background h1, section.has-light
 
 .rive-laptop-pc-phone {
   position: relative;
-  top: 100px;
   transform: scale(1.5);
 }
 
@@ -789,10 +788,25 @@ footer {
   margin-bottom: 50px;
 }
 
+.reveal .slides {
+  width: 100%;
+  height: 100%;
+}
+.reveal .slides section.page-layout-reverse {
+  flex-direction: row-reverse;
+}
 .reveal .slides section.guategeeks-page-layout {
   display: flex !important;
   align-items: center;
   justify-content: center;
+}
+.reveal .slides section.guategeeks-page-layout div .left {
+  top: 0;
+  left: 0;
+}
+.reveal .slides section.guategeeks-page-layout div .right {
+  top: 0;
+  right: 0;
 }
 .reveal .slides section.guategeeks-page-layout div.slide-text {
   padding-left: 50px;
@@ -810,7 +824,7 @@ footer {
   text-shadow: none;
   max-width: 560px;
   text-align: left;
-  font-size: 120px;
+  font-size: 160px;
   line-height: 100px;
   margin-bottom: 50px;
   font-weight: 400 !important;
@@ -818,21 +832,16 @@ footer {
 }
 .reveal .slides section.guategeeks-page-layout div.slide-text .text {
   text-shadow: none;
-  max-width: 560px;
   text-align: left;
-  font-size: 25px;
+  font-size: 35px;
   line-height: 28px;
   line-height: 150%;
 }
 .reveal .slides section.guategeeks-page-layout div.slide-image {
   width: 50%;
-  height: 100%;
-  max-height: max-content;
 }
 .reveal .slides section.guategeeks-page-layout div.slide-image img {
-  float: right;
-  width: 800px;
-  height: 800px;
+  float: none;
 }
 .reveal .slides section.guategeeks-page-layout div.slide-image #short-circuit {
   position: absolute;
@@ -841,6 +850,27 @@ footer {
   right: -2.03%;
   top: 19.86%;
   bottom: 11.53%;
+}
+
+.guategeeks-about-us .slide-image canvas,
+.guategeeks-about-us .slide-image img {
+  max-height: none;
+  position: absolute;
+  top: 20%;
+  right: 0px;
+  width: 700px;
+}
+
+.slide-image.teachers {
+  height: 930px;
+}
+.slide-image.teachers img {
+  max-height: none;
+  position: absolute;
+  top: 100px;
+  left: -100px;
+  width: 1160px;
+  height: 930px;
 }
 
 .reveal p {

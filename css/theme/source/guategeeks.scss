@@ -174,10 +174,26 @@ footer {
 
 .reveal {
     .slides {
+        width: 100%;
+        height: 100%;
+        section.page-layout-reverse{
+            flex-direction: row-reverse;
+        }
         section.guategeeks-page-layout {
             display: flex !important;
             align-items: center;
             justify-content: center;
+
+            div {
+                .left {
+                    top: 0;
+                    left: 0;
+                }
+                .right {
+                    top: 0;
+                    right: 0;
+                }
+            }
 
             div.slide-text {
                 padding-left: 50px;
@@ -195,7 +211,7 @@ footer {
                     text-shadow: none;
                     max-width: 560px;
                     text-align: left;
-                    font-size: 120px;
+                    font-size: 160px;
                     line-height: 100px;
                     margin-bottom: 50px;
                     font-weight: 400 !important;
@@ -204,30 +220,17 @@ footer {
 
                 .text {
                     text-shadow: none;
-                    max-width: 560px;
                     text-align: left;
-                    font-size: 25px;
+                    font-size: 35px;
                     line-height: 28px;
                     line-height: 150%;
                 }
             }
 
             div.slide-image {
-                // position:absolute;
-                // z-index: 9999;
-                // margin: 0;
-                // left: 58.83%;
-                // right: -2.03%;
-                // top: 19.86%;
-                // bottom: 11.53%;
                 width: 50%;
-                height: 100%;
-                max-height: max-content;
-
                 img {
-                    float: right;
-                    width: 800px;
-                    height: 800px;
+                    float: none;
                 }
 
                 #short-circuit {
@@ -243,6 +246,38 @@ footer {
         }
     }
 }
+
+// ---------------------------------------------
+// ---------------------------------------------
+
+.guategeeks-about-us {
+    .slide-image {
+        canvas,
+        img {
+            max-height: none;
+            position: absolute;
+            top: 20%;
+            right: 0px;
+            width: 700px;
+        }
+    }
+}
+
+.slide-image.teachers {
+    height: 930px;
+    img{
+        max-height: none;
+        position: absolute;
+        top: 100px;
+        left: -100px;
+        width: 1160px;
+        height: 930px;
+    }
+}
+
+// ---------------------------------------------
+// ---------------------------------------------
+
 
 
 
