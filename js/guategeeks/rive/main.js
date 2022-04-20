@@ -16,7 +16,7 @@ new rive.Rive({
     src: "assets/rive/laptop-pc-phone.riv",
     canvas: laptop_pc_phone,
     animations: ["pc", "phone", "pc-laptop", "laptop-pc", "phone-laptop", "pc-light"],
-    artboard: "composition",
+    artboard: "artboard",
     autoplay: true
 });
 
@@ -33,7 +33,17 @@ let rive_blog = document.getElementsByClassName("rive-blog")[0];
 new rive.Rive({
     src: "assets/rive/blog.riv",
     canvas: rive_blog,
-    animations: ["image", "chat", "hearth", "face", "pencil"],
+    animations: ["image", "chat", "hearth", "face", "pencil", "load"],
+    artboard: "artboard",
+    autoplay: true
+});
+
+
+let rive_robot = document.getElementsByClassName("rive-robot")[0];
+new rive.Rive({
+    src: "assets/rive/robot.riv",
+    canvas: rive_robot,
+    animations: ["lid", "particles", "floating"],
     artboard: "artboard",
     autoplay: true
 });
