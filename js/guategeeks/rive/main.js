@@ -1,14 +1,12 @@
 
 // Background animation
-let canvas = document.getElementsByClassName("background-canvas");
-for (let i = 0; i < canvas.length; i++) {
-    new rive.Rive({
-        src: "assets/rive/guategeeks_page_background.riv",
-        canvas: canvas[i],
-        artboard: "background",
-        autoplay: true
-    });
-}
+let canvas = document.getElementsByClassName("background-canvas")[0];
+new rive.Rive({
+    src: "assets/rive/guategeeks_page_background.riv",
+    canvas: canvas,
+    artboard: "background",
+    autoplay: true
+});
 
 
 let laptop_pc_phone = document.getElementsByClassName("rive-laptop-pc-phone")[0];
