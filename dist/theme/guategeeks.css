@@ -370,10 +370,22 @@ section.has-light-background, section.has-light-background h1, section.has-light
 }
 .background-canvas {
   position: absolute;
-  right: 0;
-  bottom: 10%;
-  opacity: 0.1;
-  transform: scale(1.5);
+  opacity: 0.06;
+}
+@media screen and (max-width: 768px) {
+  .background-canvas {
+    width: 150%;
+    right: 50%;
+    top: 40%;
+    transform: translate(50%, -50%);
+  }
+}
+@media screen and (min-width: 769px) {
+  .background-canvas {
+    right: 0;
+    bottom: 10%;
+    transform: scale(1.5);
+  }
 }
 
 .rive-laptop-pc-phone {
