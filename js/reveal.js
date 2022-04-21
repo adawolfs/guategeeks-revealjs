@@ -1002,8 +1002,7 @@ export default function( revealElement, options ) {
 	 * @param {number} [presentationHeight=dom.wrapper.offsetHeight]
 	 */
 	function getComputedSlideSize( presentationWidth, presentationHeight ) {
-
-		const size = {
+		let size = {
 			// Slide size
 			width: config.width,
 			height: config.height,
@@ -1012,6 +1011,12 @@ export default function( revealElement, options ) {
 			presentationWidth: presentationWidth || dom.wrapper.offsetWidth,
 			presentationHeight: presentationHeight || dom.wrapper.offsetHeight
 		};
+
+		// GUATEGEEKS: Enable responsive
+		if (deviceType() === 'mobile') {
+			size.width = config.height;
+			size.height = config.width;
+		}
 
 		// Reduce available space by margin
 		size.presentationWidth -= ( size.presentationWidth * config.margin );
@@ -1026,7 +1031,6 @@ export default function( revealElement, options ) {
 		if( typeof size.height === 'string' && /%$/.test( size.height ) ) {
 			size.height = parseInt( size.height, 10 ) / 100 * size.presentationHeight;
 		}
-
 		return size;
 
 	}

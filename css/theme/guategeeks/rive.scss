@@ -21,7 +21,13 @@
     
 
 .rive-laptop-pc-phone {
-    position: relative;
-    transform: scale(1.5);
+
+    @media screen and (max-width: 768px) {
+    }
+    
+    @media screen and (min-width: 769px) {
+        position: relative;
+        transform: scale(1.5);
+    }
 }
 
