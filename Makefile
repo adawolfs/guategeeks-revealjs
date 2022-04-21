@@ -4,3 +4,4 @@ push-guategeeks:
 	git add .
 	git commit -m "guategeeks.github.io"
 	git push -u guategeeks +guategeeks.github.io:main
+	git checkout main
