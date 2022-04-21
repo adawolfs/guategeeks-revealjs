@@ -698,11 +698,19 @@ html, #short-circuit, #short-circuit::before, #short-circuit::after {
   }
 }
 /* That's all ;) */
-.idc-3d-aframe {
-  position: fixed;
-  width: 100%;
-  height: 800px;
-  top: 100px;
+@media screen and (min-width: 768px) {
+  .idc-3d-aframe {
+    position: fixed;
+    width: 100%;
+    height: 800px;
+    top: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .idc-3d-aframe {
+    height: 1500px;
+    width: 1500px;
+  }
 }
 
 .slide-aframe-short-circuit {
@@ -734,45 +742,95 @@ html, #short-circuit, #short-circuit::before, #short-circuit::after {
 
 nav {
   width: 100%;
-  position: absolute;
   z-index: 100;
-  font-weight: 100;
-  font-size: large;
 }
-nav .nav-wrapper {
-  width: 100%;
-  display: flex;
-  padding: 20px 40px 0 0;
-}
-nav .nav-wrapper .logo {
-  display: flex;
-  justify-content: center;
-  width: 10%;
-  padding-left: 50px;
-}
-nav .nav-wrapper .logo img {
-  width: 200px;
-  height: 100%;
-}
-nav .nav-wrapper .menu-wrapper {
-  width: 85%;
-}
-nav .nav-wrapper .menu-wrapper .menu {
-  display: flex;
-  float: right;
-  justify-content: center;
-  align-items: center;
-}
-nav .nav-wrapper div {
-  padding: 10px;
-  font-family: "Barlow", sans-serif;
-  color: white;
-  text-transform: uppercase;
-}
-nav .nav-wrapper div a:visited,
+@media screen and (min-width: 768px) {
+  nav {
+    height: 10%;
+    font-weight: 100;
+    font-size: large;
+  }
+  nav .nav-wrapper {
+    width: 100%;
+    display: flex;
+    padding: 20px 40px 0 0;
+  }
+  nav .nav-wrapper .logo {
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    padding-left: 50px;
+  }
+  nav .nav-wrapper .logo img {
+    width: 200px;
+    height: 100%;
+  }
+  nav .nav-wrapper .menu-wrapper {
+    width: 85%;
+  }
+  nav .nav-wrapper .menu-wrapper .menu {
+    display: flex;
+    float: right;
+    justify-content: center;
+    align-items: center;
+  }
+  nav .nav-wrapper div {
+    padding: 10px;
+    font-family: "Barlow", sans-serif;
+    color: white;
+    text-transform: uppercase;
+  }
+  nav .nav-wrapper div a:visited,
 nav .nav-wrapper div a:link {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    height: 10%;
+    font-weight: 100;
+    font-size: x-small;
+  }
+  nav .nav-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px 0 0;
+    justify-content: center;
+    align-items: center;
+  }
+  nav .nav-wrapper .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  nav .nav-wrapper .logo img {
+    width: 200px;
+    height: 100%;
+  }
+  nav .nav-wrapper .menu-wrapper {
+    display: none;
+    width: 85%;
+  }
+  nav .nav-wrapper .menu-wrapper .menu {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    justify-content: center;
+    align-items: center;
+  }
+  nav .nav-wrapper div {
+    font-family: "Barlow", sans-serif;
+    color: white;
+    text-transform: uppercase;
+  }
+  nav .nav-wrapper div a:visited,
+nav .nav-wrapper div a:link {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 footer {
@@ -783,15 +841,38 @@ footer {
   padding: 20px;
   color: #eee;
   font-family: "Barlow", sans-serif;
-  font-weight: 100;
-  font-size: 1em;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    font-weight: 100;
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer {
+    font-weight: 50;
+    font-size: 10px;
+  }
 }
 
 .reveal {
   font-style: normal;
   text-transform: none;
   text-shadow: none;
+}
+@media screen and (min-width: 768px) {
+  .reveal {
+    height: 90%;
+  }
+  .reveal section {
+    margin-top: -50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .reveal {
+    height: 90%;
+  }
 }
 .reveal p {
   font-weight: 100 !important;
@@ -804,6 +885,44 @@ footer {
   margin-bottom: 50px;
 }
 
+@media screen and (min-width: 768px) {
+  .reveal .slides section.guategeeks-page-layout div.slide-text {
+    width: 50%;
+  }
+  .reveal .slides section.guategeeks-page-layout div.slide-image {
+    width: 50%;
+  }
+  .reveal .slides section.guategeeks-page-layout div.slide-image #short-circuit {
+    position: absolute;
+    z-index: 9999;
+    margin: 0;
+    right: -2.03%;
+    top: 19.86%;
+    bottom: 11.53%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    flex-direction: column !important;
+  }
+  section div.slide-text {
+    width: 70% !important;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  section div.slide-image {
+    width: 80%;
+  }
+  section div.slide-image canvas,
+section div.slide-image img {
+    width: 100%;
+  }
+  section div.slide-image #short-circuit {
+    transform: scale(4);
+  }
+}
 .reveal .slides {
   width: 100%;
   height: 100%;
@@ -831,7 +950,6 @@ footer {
   padding-left: 50px;
   display: flex;
   flex-direction: column;
-  width: 50%;
   font-style: normal;
   font-weight: 400;
   font-size: 81px;
@@ -856,70 +974,119 @@ footer {
   line-height: 28px;
   line-height: 150%;
 }
-.reveal .slides section.guategeeks-page-layout div.slide-image {
-  width: 50%;
-}
 .reveal .slides section.guategeeks-page-layout div.slide-image img {
   float: none;
 }
-.reveal .slides section.guategeeks-page-layout div.slide-image #short-circuit {
-  position: absolute;
-  z-index: 9999;
-  margin: 0;
-  right: -2.03%;
-  top: 19.86%;
-  bottom: 11.53%;
-}
 
-.guategeeks-course-ai .slide-text {
-  margin-top: 100px;
-}
-.guategeeks-course-ai .slide-image canvas,
+@media screen and (max-width: 768px) {
+  .guategeeks-course-ai .slide-text {
+    margin-top: 400px;
+  }
+  .guategeeks-course-ai .slide-image {
+    margin-top: 0px;
+    width: 100%;
+  }
+  .guategeeks-course-ai .slide-image canvas,
 .guategeeks-course-ai .slide-image img {
-  max-height: none;
-  position: absolute;
-  top: 0px;
-  margin-top: -50px;
-  right: 0px;
-  transform: translateX(100px);
-  width: 1100px;
+    max-height: none;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .guategeeks-course-ai .slide-text {
+    margin-top: 100px;
+  }
+  .guategeeks-course-ai .slide-image {
+    width: 100%;
+  }
+  .guategeeks-course-ai .slide-image canvas,
+.guategeeks-course-ai .slide-image img {
+    max-height: none;
+    position: absolute;
+    top: 0px;
+    margin-top: -50px;
+    right: 0px;
+    transform: translateX(100px);
+    width: 1500px;
+  }
 }
 
-.guategeeks-blog .slide-text {
-  margin-top: 15%;
+@media screen and (max-width: 768px) {
+  .guategeeks-shortcircuit .slide-image {
+    margin-top: 300px;
+  }
 }
-.guategeeks-blog .slide-image canvas,
+
+@media screen and (max-width: 768px) {
+  .guategeeks-blog .slide-image {
+    width: 100%;
+  }
+  .guategeeks-blog .slide-image canvas,
 .guategeeks-blog .slide-image img {
-  max-height: none;
-  position: absolute;
-  top: 0px;
-  margin-top: -50px;
-  right: 0px;
-  width: 1100px;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .guategeeks-blog .slide-text {
+    margin-top: 15%;
+  }
+  .guategeeks-blog .slide-image canvas,
+.guategeeks-blog .slide-image img {
+    max-height: none;
+    position: absolute;
+    top: 0px;
+    margin-top: -50px;
+    right: 0px;
+    width: 1100px;
+  }
 }
 
-.guategeeks-about-us {
-  top: 20% !important;
+@media screen and (max-width: 768px) {
+  .guategeeks-about-us .slide-image {
+    width: 50% !important;
+    margin-top: 300px;
+  }
 }
-.guategeeks-about-us .slide-image canvas,
+@media screen and (min-width: 769px) {
+  .guategeeks-about-us {
+    top: 20% !important;
+  }
+  .guategeeks-about-us .slide-image canvas,
 .guategeeks-about-us .slide-image img {
-  max-height: none;
-  position: absolute;
-  top: 0%;
-  right: 100px;
-  width: 650px;
+    max-height: none;
+    position: absolute;
+    top: 0%;
+    right: 100px;
+    width: 650px;
+  }
 }
 
-.slide-image.teachers {
-  height: 930px;
+@media screen and (max-width: 768px) {
+  .guategeeks-teachers div.slide-text {
+    margin-top: 200px;
+  }
+  .guategeeks-teachers div.slide-image {
+    width: 100%;
+  }
+  .guategeeks-teachers div.slide-image img {
+    width: 80%;
+  }
 }
-.slide-image.teachers img {
-  max-height: none;
-  position: absolute;
-  top: 100px;
-  left: -100px;
-  width: 1160px;
-  height: 930px;
+@media screen and (min-width: 768px) {
+  .guategeeks-teachers div.slide-text {
+    margin-top: 200px;
+  }
+  .guategeeks-teachers div.slide-image {
+    width: 100%;
+  }
+  .guategeeks-teachers div.slide-image img {
+    max-height: none;
+    position: absolute;
+    top: 100px;
+    left: -100px;
+    width: 1160px;
+    height: 930px;
+  }
 }
 
 .reveal p {
