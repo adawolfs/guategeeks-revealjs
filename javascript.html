@@ -20,6 +20,25 @@
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<script>
+
+		(function (global, d) {
+
+			const deviceType = () => {
+				const ua = navigator.userAgent;
+				if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+					return "tablet";
+				}
+				else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+					return "mobile";
+				}
+				return "desktop";
+			};
+
+			global.deviceType = deviceType;
+		})(window, document);
+
+	</script>
 </head>
 
 <body>
@@ -242,8 +261,8 @@
 		// - https://revealjs.com/config/
 		Reveal.initialize({
 			hash: true,
-            width: 960,
-	        height: 700,
+			width: 960,
+			height: 700,
 			// Learn about plugins: https://revealjs.com/plugins/
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
 		});
