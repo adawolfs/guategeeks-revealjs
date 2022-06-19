@@ -20,6 +20,33 @@
 
     
 
+.rive-teacher-students {
+
+    @media screen and (max-width: 768px) {
+        transform: scale(1.1);
+    }
+    
+    @media screen and (min-width: 769px) {
+        position: relative;
+        transform: scale(1);
+        top: 100px;
+    }
+}
+.rive-courses-teacher-students {
+
+    @media screen and (max-width: 768px) {
+    }
+    
+    @media screen and (min-width: 769px) {
+        position: relative;
+        transform: scale(1);
+        top: 100px;
+    }
+}
+
+
+
+
 .rive-laptop-pc-phone {
 
     @media screen and (max-width: 768px) {
@@ -30,4 +57,5 @@
         transform: scale(1.5);
     }
 }
+
 

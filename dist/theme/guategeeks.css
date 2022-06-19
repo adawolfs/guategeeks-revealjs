@@ -388,6 +388,27 @@ section.has-light-background, section.has-light-background h1, section.has-light
   }
 }
 
+@media screen and (max-width: 768px) {
+  .rive-teacher-students {
+    transform: scale(1.1);
+  }
+}
+@media screen and (min-width: 769px) {
+  .rive-teacher-students {
+    position: relative;
+    transform: scale(1);
+    top: 100px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .rive-courses-teacher-students {
+    position: relative;
+    transform: scale(1);
+    top: 100px;
+  }
+}
+
 @media screen and (min-width: 769px) {
   .rive-laptop-pc-phone {
     position: relative;
@@ -999,6 +1020,31 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  .guategeeks-page-courses {
+    top: 100px !important;
+  }
+  .guategeeks-page-courses .slide-image {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .guategeeks-page-courses .slide-image {
+    margin-top: 0px;
+    width: 100%;
+  }
+  .guategeeks-page-courses .slide-image canvas,
+.guategeeks-page-courses .slide-image img {
+    position: absolute;
+    left: 50%;
+    width: 150% !important;
+    transform: translate(-50%, 10px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .guategeeks-course-robotics {
+    top: 100px !important;
+  }
   .guategeeks-course-robotics .slide-image {
     margin-top: 400px;
   }

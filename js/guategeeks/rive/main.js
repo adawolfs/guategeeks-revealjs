@@ -32,6 +32,37 @@ rive_about_us.on('load', () => {
 
 riveComponents.push(rive_about_us);
 
+guategeeks.waitForReady('rive_rive_teacher_students');
+let rive_teacher_students = new rive.Rive({
+    src: "assets/rive/teacher_students.riv",
+    canvas: document.getElementsByClassName("rive-teacher-students")[0],
+    stateMachines: 'animation',
+    artboard: "artboard",
+    autoplay: false
+});
+rive_teacher_students.play('animation');
+rive_teacher_students.on('load', () => {
+    guategeeks.isReady('rive_rive_teacher_students');
+});
+
+riveComponents.push(rive_teacher_students);
+
+
+guategeeks.waitForReady('rive_rive_courses_teacher_students');
+let rive_courses_teacher_students = new rive.Rive({
+    src: "assets/rive/teacher_students.riv",
+    canvas: document.getElementsByClassName("rive-courses-teacher-students")[0],
+    stateMachines: 'animation',
+    artboard: "artboard",
+    autoplay: false
+});
+rive_courses_teacher_students.play('animation');
+rive_courses_teacher_students.on('load', () => {
+    guategeeks.isReady('rive_rive_courses_teacher_students');
+});
+
+riveComponents.push(rive_courses_teacher_students);
+
 guategeeks.waitForReady('rive_rive_ai');
 let rive_ai = new rive.Rive({
     src: "assets/rive/ai.riv",
@@ -85,6 +116,14 @@ Reveal.on( 'slidechanged', event => {
         console.log(riveComponent);
         riveComponent.pause();
     });
+
+    if(event.currentSlide === document.querySelector('.guategeeks-page-home')){
+        rive_teacher_students.play('animation');
+    }
+
+    if(event.currentSlide === document.querySelector('.guategeeks-page-courses')){
+        rive_courses_teacher_students.play('animation');
+    }
     
     if (event.currentSlide === document.querySelector('.guategeeks-course-ai')) {
         rive_ai.play(["brain", "data1"]);

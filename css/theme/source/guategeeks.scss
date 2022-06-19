@@ -418,8 +418,36 @@ footer {
 // ---------------------------------------------
 // ---------------------------------------------
 
+.guategeeks-page-courses {
+    @media screen and (min-width: 768px) {
+        top: 100px!important;
+        .slide-image {
+            margin-top: 10px;
+        }
+
+    }
+
+    @media screen and (max-width: 768px) {
+        .slide-image {
+            margin-top: 0px;
+            width: 100%;
+
+            canvas,
+            img {
+                position: absolute;
+                left: 50%;
+                width: 150% !important;
+                transform: translate(-50%, 10px);
+            }
+        }
+   
+    }
+}
+
+
 .guategeeks-course-robotics {
     @media screen and (min-width: 768px) {
+        top: 100px!important;
         .slide-image {
             margin-top: 400px;
         }
