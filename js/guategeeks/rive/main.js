@@ -111,9 +111,7 @@ riveComponents.push(rive_robot);
 // Listeners for the animations
 Reveal.on( 'slidechanged', event => {
     
-    console.log(event)
     riveComponents.forEach(riveComponent => {
-        console.log(riveComponent);
         riveComponent.pause();
     });
 
